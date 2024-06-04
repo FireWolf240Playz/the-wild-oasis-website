@@ -17,7 +17,7 @@ function Logo() {
         className="w-[60px] h-[60px] max-600:w-6 max-600:h-6"
       />
 
-      {widht > 400 ? (
+      {widht > 600 ? (
         <span className="text-xl font-semibold text-primary-100 max-600:text-sm whitespace-nowrap max-400:text-[8px] max-400:font-thin">
           The Wild Oasis
         </span>
