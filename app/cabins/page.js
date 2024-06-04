@@ -13,7 +13,7 @@ export default function Page({ searchParams }) {
 
   return (
     <div>
-      <h1 className="text-4xl mb-5 text-accent-400 font-medium">
+      <h1 className="text-4xl mb-5 text-accent-400 font-medium text-center">
         Our Luxury Cabins
       </h1>
       <p className="text-primary-200 text-lg mb-10">
@@ -24,7 +24,7 @@ export default function Page({ searchParams }) {
         home away from home. The perfect spot for a peaceful, calm vacation.
         Welcome to paradise.
       </p>
-      <div className="flex justify-end mb-8">
+      <div className="flex justify-end max-600:justify-center mb-8">
         <Filter />
       </div>
       <Suspense fallback={<Spinner />} key={filter}>

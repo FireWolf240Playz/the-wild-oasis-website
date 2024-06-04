@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        "max-400": { max: "400px" },
+        "max-600": { max: "600px" },
+        "max-800": { max: "800px" },
+        "max-1000": { max: "1000px" },
+      },
       colors: {
         primary: {
           50: "#E1E8EF",

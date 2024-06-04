@@ -11,11 +11,11 @@ export const revalidate = 86400;
 
 export default async function Page() {
   const cabins = await getCabins();
-  console.log(cabins);
+
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+    <div className="grid grid-cols-5 gap-x-16 gap-y-32 text-lg items-center max-1000:flex max-1000:flex-col max-1000:justify-center max-1000:items-center max-1000:gap-y-16 max-1000:gap-x-12 max-600:gap-x-8  ">
       <div className="col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+        <h1 className="text-4xl mb-10 text-accent-400 font-medium text-center">
           Welcome to The Wild Oasis
         </h1>
 
@@ -41,7 +41,7 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-2  ">
         <Image
           src={image1}
           alt="Family sitting around a fire pit in front of cabin"
@@ -50,7 +50,7 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-2 ">
         <Image
           src={image2}
           alt="Family that manages The Wild Oasis"
