@@ -17,22 +17,22 @@ NextAuth: Authentication for Next.js applications.
 
 **Features**
 
-Responsive Design: Optimized for various devices and screen sizes.
+**Responsive Design**: Optimized for various devices and screen sizes.
 
-Dynamic Content: Fetches and displays data in real-time using Supabase.
+**Dynamic Content:** Fetches and displays data in real-time using Supabase.
 
-Secure Authentication: User authentication and session management powered by NextAuth.
+**Secure Authentication**: User authentication and session management powered by NextAuth.
 
-Booking Management: Efficiently manage bookings and reservations.
+**Booking Management**: Efficiently manage bookings and reservations.
 
-Modern UI: Styled with Tailwind CSS for a sleek and professional look.
+**Modern UI**: Styled with Tailwind CSS for a sleek and professional look.
 
 Getting Started
 
-Prerequisites
+**Prerequisites**
+
 Node.js
 npm or yarn
-
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
