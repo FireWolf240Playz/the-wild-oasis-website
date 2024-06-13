@@ -13,8 +13,8 @@ export default function Home() {
         quality={80}
       />
 
-      <div className="relative z-10 text-center">
-        <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal max-600:text-4xl ">
+      <div className="relative text-center z-0">
+        <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal max-600:text-4xl">
           Welcome to paradise.
         </h1>
         <Link

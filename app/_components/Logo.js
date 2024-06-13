@@ -9,21 +9,17 @@ function Logo() {
   const widht = useWindowWidth();
 
   return (
-    <Link href="/" className="flex items-center gap-4 z-10 max-600:gap-1">
+    <Link href="/" className="flex items-center gap-4 z-10 max-600:gap-3">
       <Image
         src={logo}
         quality={100}
         alt="The Wild Oasis logo"
-        className="w-[60px] h-[60px] max-600:w-6 max-600:h-6"
+        className="w-[60px] h-[60px] max-600:w-8 max-600:h-8"
       />
 
-      {widht > 600 ? (
-        <span className="text-xl font-semibold text-primary-100 max-600:text-sm whitespace-nowrap max-400:text-[8px] max-400:font-thin">
-          The Wild Oasis
-        </span>
-      ) : (
-        ""
-      )}
+      <span className="text-xl font-semibold text-primary-100 whitespace-nowrap max-600:text-lg">
+        The Wild Oasis
+      </span>
     </Link>
   );
 }

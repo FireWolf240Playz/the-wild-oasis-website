@@ -1,53 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import { auth } from "../_lib/auth";
+import NavigationEl from "./NavigationEl";
 
 export default async function Navigation() {
-  const session = await auth();
-
-  return (
-    <nav className="z-10 text-xl">
-      <ul className="flex gap-16 items-center max-600:gap-10 max-600:text-[11px] ">
-        <li>
-          <Link
-            href="/cabins"
-            className="hover:text-accent-400 transition-colors whitespace-nowrap max-600:ml-4"
-          >
-            Cabins
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/about"
-            className="hover:text-accent-400 transition-colors whitespace-nowrap"
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          {session?.user?.image ? (
-            <Link
-              href="/account"
-              className="hover:text-accent-400 transition-colors flex items-center gap-4 "
-            >
-              <span>Guest area</span>
-              <img
-                src={session.user.image}
-                className="h-8 rounded-full  max-600:w-6 max-600:h-6"
-                alt={session.user.name}
-                referrerPolicy="no-referrer"
-              />
-            </Link>
-          ) : (
-            <Link
-              href="/account"
-              className="hover:text-accent-400 transition-colors whitespace-nowrap"
-            >
-              Guest area
-            </Link>
-          )}
-        </li>
-      </ul>
-    </nav>
-  );
+  return <NavigationEl />;
 }

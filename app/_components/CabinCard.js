@@ -46,10 +46,10 @@ function CabinCard({ cabin }) {
           </p>
         </div>
 
-        <div className="bg-primary-950 border-t border-t-primary-800 text-right max-400:text-center">
+        <div className="bg-primary-950 border-t border-t-primary-800 text-right max-600:text-center">
           <a
             href={`/cabins/${id}`}
-            className="border-l border-primary-800 py-4 px-6 inline-block hover:bg-accent-600 transition-all hover:text-primary-900 max-400:border-0"
+            className="border-l border-primary-800 py-4 px-6 inline-block hover:bg-accent-600 transition-all hover:text-primary-900 max-600:border-0 "
           >
             Details & reservation &rarr;
           </a>
