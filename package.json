@@ -17,9 +17,7 @@
     "next-auth": "^5.0.0-beta.18",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
-    "react-dom": "^18",
-    "react-fa": "^5.0.0",
-    "react-icons": "^5.2.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",
