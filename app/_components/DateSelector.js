@@ -10,6 +10,7 @@ import {
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { useReservation } from "./ReservationContext";
+import useWindowWidth from "@/useWindowWidth";
 
 function isAlreadyBooked(range, datesArr) {
   return (
@@ -25,6 +26,8 @@ function DateSelector({ settings, cabin, bookedDates }) {
   const { range, setRange, resetRange } = useReservation();
 
   const displayRange = isAlreadyBooked(range, bookedDates) ? {} : range;
+  const widht = useWindowWidth();
+  const monthsToShowOnDayPicker = widht <= 600 ? 1 : 2;
 
   // CHANGE
 
@@ -49,7 +52,7 @@ function DateSelector({ settings, cabin, bookedDates }) {
         fromDate={new Date()}
         toYear={new Date().getFullYear() + 5}
         captionLayout="dropdown"
-        numberOfMonths={2}
+        numberOfMonths={monthsToShowOnDayPicker}
         disabled={(curDate) =>
           isPast(curDate) ||
           bookedDates.some((date) => isSameDay(date, curDate))

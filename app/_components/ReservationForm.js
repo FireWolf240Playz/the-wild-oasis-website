@@ -4,10 +4,12 @@ import { differenceInDays } from "date-fns";
 import { useReservation } from "./ReservationContext";
 import { createBooking } from "../_lib/actions";
 import SubmitButton from "./SubmitButton";
+import useWindowWidth from "@/useWindowWidth";
 
 function ReservationForm({ cabin, user }) {
   const { range, resetRange } = useReservation();
   const { maxCapacity, regularPrice, discount, id } = cabin;
+  const widht = useWindowWidth();
 
   const startDate = range.from;
   const endDate = range.to;
@@ -27,17 +29,20 @@ function ReservationForm({ cabin, user }) {
 
   return (
     <div className="scale-[1.01]">
-      <div className="bg-primary-800 text-primary-300 px-16 py-2 flex justify-between items-center">
+      <div className="bg-primary-800 text-primary-300 px-16 py-2 flex justify-between items-center max-400:text-sm max-400:flex-col">
         <p>Logged in as</p>
 
         <div className="flex gap-4 items-center">
-          <img
-            // Important to display google profile images
-            referrerPolicy="no-referrer"
-            className="h-8 rounded-full"
-            src={user.image}
-            alt={user.name}
-          />
+          {widht > 600 ? (
+            <img
+              // Important to display google profile images
+              referrerPolicy="no-referrer"
+              className="h-8 rounded-full"
+              src={user.image}
+              alt={user.name}
+            />
+          ) : null}
+
           <p>{user.name}</p>
         </div>
       </div>
@@ -50,8 +55,8 @@ function ReservationForm({ cabin, user }) {
         }}
         className="bg-primary-900 py-10 px-16 text-lg flex gap-5 flex-col"
       >
-        <div className="space-y-2">
-          <label htmlFor="numGuests">How many guests?</label>
+        <div className="space-y-2 max-600:text-base text-left">
+          <label htmlFor="numGuests ">How many guests?</label>
           <select
             name="numGuests"
             id="numGuests"
@@ -69,9 +74,9 @@ function ReservationForm({ cabin, user }) {
           </select>
         </div>
 
-        <div className="space-y-2">
-          <label htmlFor="observations">
-            Anything we should know about your stay?
+        <div className="space-y-2 max-600:text-left">
+          <label htmlFor="observations" className="max-600:text-base">
+            Anything extra we should know?
           </label>
           <textarea
             name="observations"
@@ -81,7 +86,7 @@ function ReservationForm({ cabin, user }) {
           />
         </div>
 
-        <div className="flex justify-end items-center gap-6">
+        <div className="flex justify-end items-center gap-6 max-600:justify-center">
           {!(startDate && endDate) ? (
             <p className="text-primary-300 text-base">
               Start by selecting dates
