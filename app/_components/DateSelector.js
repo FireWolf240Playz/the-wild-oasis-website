@@ -59,8 +59,8 @@ function DateSelector({ settings, cabin, bookedDates }) {
         }
       />
 
-      <div className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]">
-        <div className="flex items-baseline gap-6">
+      <div className="flex items-center justify-between px-10 bg-accent-500 text-primary-800 max-600:flex-wrap  h-[100px] ">
+        <div className="flex items-baseline gap-6 max-400:items-center">
           <p className="flex gap-2 items-baseline">
             {discount > 0 ? (
               <>
@@ -76,12 +76,16 @@ function DateSelector({ settings, cabin, bookedDates }) {
           </p>
           {numNights ? (
             <>
-              <p className="bg-accent-600 px-3 py-2 text-2xl">
+              <p className="bg-accent-600 px-3 py-1 text-2xl max-600:flex">
                 <span>&times;</span> <span>{numNights}</span>
               </p>
-              <p>
-                <span className="text-lg font-bold uppercase">Total</span>{" "}
-                <span className="text-2xl font-semibold">${cabinPrice}</span>
+              <p className="text-center">
+                <span className="text-lg font-bold uppercase max-600:text-sm">
+                  Total
+                </span>{" "}
+                <span className="text-2xl font-semibold max-600:text-lg">
+                  ${cabinPrice}
+                </span>
               </p>
             </>
           ) : null}
@@ -89,7 +93,7 @@ function DateSelector({ settings, cabin, bookedDates }) {
 
         {range.from || range.to ? (
           <button
-            className="border border-primary-800 py-2 px-4 text-sm font-semibold"
+            className="border border-primary-800 py-2 px-4 text-sm font-semibold max-600:ml-[6rem] "
             onClick={() => resetRange()}
           >
             Clear
