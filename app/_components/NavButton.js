@@ -1,8 +1,12 @@
-function NavButton({ onClick, navBarOpen }) {
+function NavButton({ onClick, navBarOpen, givenClassName }) {
   return (
     <button
       onClick={onClick}
-      className="z-20 absolute top-12 right-6 text-primary-100 "
+      className={`${
+        givenClassName === undefined
+          ? " absolute top-12 right-6 text-primary-100"
+          : givenClassName
+      }`}
     >
       {navBarOpen ? (
         <svg

@@ -20,7 +20,7 @@ export default async function Page({ params }) {
       >
         <input type="hidden" value={bookingId} name="bookingId" />
 
-        <div className="space-y-2">
+        <div className="space-y-2 max-800:text-left">
           <label htmlFor="numGuests">How many guests?</label>
           <select
             name="numGuests"
@@ -40,7 +40,7 @@ export default async function Page({ params }) {
           </select>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 max-800:text-left">
           <label htmlFor="observations">
             Anything we should know about your stay?
           </label>

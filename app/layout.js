@@ -26,7 +26,7 @@ export default function Root({ children }) {
       >
         <Header />
 
-        <div className="flex-1 px-8 py-12 max-w-full ">
+        <div className="flex-1 px-4 py-12 max-w-full ">
           <main className="max-w-7xl mx-auto w-full">
             <ReservationProvider>{children}</ReservationProvider>
           </main>

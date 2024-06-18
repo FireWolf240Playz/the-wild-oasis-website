@@ -1,27 +1,14 @@
 "use client";
 import { useState } from "react";
-
 import Link from "next/link";
-
-import { AnimatePresence } from "framer-motion";
-
+import { AnimatePresence, motion } from "framer-motion";
 import MenuOverlay from "./MenuOverlay";
-
 import NavButton from "./NavButton";
 
 const links = [
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Cabins",
-    href: "/cabins",
-  },
-  {
-    title: "Login",
-    href: "/login",
-  },
+  { title: "About", href: "/about" },
+  { title: "Cabins", href: "/cabins" },
+  { title: "Login", href: "/login" },
 ];
 
 function NavigationEl() {
@@ -37,11 +24,9 @@ function NavigationEl() {
           </li>
         ))}
       </ul>
-
-      <div className="max-600:flex hidden items-center px-3 py-2 font-bold">
+      <div className="max-600:flex hidden items-center px-3 py-2 font-bold ">
         <NavButton navBarOpen={navBarOpen} onClick={toggleNavBar} />
       </div>
-
       <AnimatePresence>
         {navBarOpen && (
           <MenuOverlay

@@ -14,7 +14,7 @@ function UpdateProfileForm({ children, guest }) {
       className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
       action={updateGuest}
     >
-      <div className="space-y-2">
+      <div className="space-y-2 max-800:text-left">
         <label>Full name</label>
         <input
           disabled
@@ -24,7 +24,7 @@ function UpdateProfileForm({ children, guest }) {
         />
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-2 max-800:text-left">
         <label>Email address</label>
         <input
           disabled
@@ -46,7 +46,7 @@ function UpdateProfileForm({ children, guest }) {
         {children}
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-2 max-800:text-left">
         <label htmlFor="nationalID">National ID number</label>
         <input
           name="nationalID"
@@ -55,7 +55,7 @@ function UpdateProfileForm({ children, guest }) {
         />
       </div>
 
-      <div className="flex justify-end items-center gap-6">
+      <div className="flex justify-end items-center gap-6 max-800:justify-center">
         <Button />
       </div>
     </form>
