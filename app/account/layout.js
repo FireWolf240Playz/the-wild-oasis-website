@@ -16,10 +16,12 @@ export default function Layout({ children }) {
 
   return (
     <div className="relative grid grid-cols-[16rem_1fr] h-full gap-12 max-800:grid-cols-1">
-      <NavButton
-        givenClassName="absolute top-0 right-4 "
-        onClick={handleShow}
-      />
+      {width < 800 ? (
+        <NavButton
+          givenClassName="absolute top-0 right-4 "
+          onClick={handleShow}
+        />
+      ) : null}
       <div
         className={`transition-all duration-500 ${
           width <= 800 ? "hidden" : "block"
